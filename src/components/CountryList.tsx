@@ -8,7 +8,7 @@ const CountryList: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [selectedCountries, setSelectedCountries] = useState<Country[]>([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const getCountries = async () => {
       try {
         const data: Country[] = await fetchCountries();
